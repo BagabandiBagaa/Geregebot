@@ -1,0 +1,72 @@
+version: "3.1"
+
+intents:
+  - ask_work_time
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - receipt_paper_info
+  - ask_edtech_contact
+  - pos_shinchilelt_hiih
+  - snteidugaar_avah
+  - give_contact
+  - give_name
+
+actions:
+  - ActionSaveData
+entities:
+  - snnum
+  - contact
+  - name
+slots:
+  snnum:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: snnum
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  contact:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: contact
+responses:
+  utter_greet:
+    - text: "Сайн байна уу? Танд юугаар туслах вэ?"
+
+  utter_ask_work_time:
+  - text: "Манайх Даваа-Баасан гарагийн 10:00-18:00 цагийн хооронд ажиллаж байна."
+  utter_givecontact:
+  - text: "Gerege Edtech холбоо барих дугаар: 72773773."
+  utter_receipt_paper_info:
+  - text: "ГЦЦ ХХК НӨАТ үнэ 3500₮ /30ш дээш/ НӨАТ-гүй үнэ 3300₮ /30 доош/ Цаасны хэмжээ 53*35 200Roll стикер цаас захиалгаар хийлгэн авчирч байгаа тул бусад цаас таарахгүй."
+
+  utter_ask_for_more:
+  - text: "Таньд өөр асуух асуулт байнуу?"
+    buttons:
+        - title: "Холбогдох дугаар"
+          payload: "танай дугаар"
+        - title: "Пос шинэчилэх"
+          payload: "пос шинэчилэх"
+
+  utter_snteidugaar_avah:
+  - text: "Та Пос машины ард, бар кодний доор байрлах S/N: кодыг оруулна уу."
+
+  utter_ask_contact:
+  - text: "Холбоо барих дугаараа оруулна уу..."
+
+  utter_ask_name:
+  - text: "Таны нэр хэн бэ?"
+
+  utter_snteidugaar_avah_Complete:
+  - text: "Таны хүсэлтийг хүлээж авлаа. S/N: {snnum}. Бид тань руу эргэн холбогдоё."
+  utter_goodbye:
+  - text: "Bye"
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."

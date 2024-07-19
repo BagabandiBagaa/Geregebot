@@ -1,0 +1,220 @@
+2024-07-09 17:22:45,244 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2024-07-09 17:22:46,093 [INFO ]  Loading model models\20240708-150524-frigid-float.tar.gz...
+2024-07-09 17:24:10,714 [WARNI]  The UnexpecTED Intent Policy is currently experimental and might change or be removed in the future 🔬 Please share your feedback on it in the forum (https://forum.rasa.com) to help us make this feature ready for production.
+2024-07-09 17:24:28,841 [INFO ]  Rasa server is up and running.
+2024-07-09 17:25:14,851 [INFO ]  Killing Sanic server now.
+2024-07-09 17:25:15,296 [ERROR]  Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<ctrlc_workaround_for_windows.<locals>.stay_active() running at C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\compat.py:79> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x0000021309E810D0>()]>>
+2024-07-09 17:28:38,190 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2024-07-09 17:28:40,045 [INFO ]  Loading model models\20240708-150524-frigid-float.tar.gz...
+2024-07-09 17:29:12,047 [ERROR]  Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\app.py", line 1204, in run
+    serve_single(server_settings)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\server\runners.py", line 206, in serve_single
+    serve(**server_settings)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\server\runners.py", line 130, in serve
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "C:\Program Files\Python39\lib\asyncio\base_events.py", line 634, in run_until_complete
+    self.run_forever()
+  File "C:\Program Files\Python39\lib\asyncio\windows_events.py", line 321, in run_forever
+    super().run_forever()
+  File "C:\Program Files\Python39\lib\asyncio\base_events.py", line 601, in run_forever
+    self._run_once()
+  File "C:\Program Files\Python39\lib\asyncio\base_events.py", line 1905, in _run_once
+    handle._run()
+  File "C:\Program Files\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\app.py", line 2000, in _server_event
+    await self.dispatch(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\signals.py", line 191, in dispatch
+    return await dispatch
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\signals.py", line 161, in _dispatch
+    retval = await maybe_coroutine
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\app.py", line 1524, in _listener
+    await maybe_coro
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\core\run.py", line 290, in load_agent_on_start
+    app.ctx.agent = await agent.load_agent(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\core\agent.py", line 254, in load_agent
+    agent.load_model(model_path)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\core\agent.py", line 352, in load_model
+    self.processor = MessageProcessor(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\core\processor.py", line 105, in __init__
+    self.model_filename, self.model_metadata, self.graph_runner = self._load_model(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\core\processor.py", line 142, in _load_model
+    metadata, runner = loader.load_predict_graph_runner(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\loader.py", line 29, in load_predict_graph_runner
+    runner = graph_runner_class.create(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\runner\dask.py", line 51, in create
+    return cls(graph_schema, model_storage, execution_context, hooks)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\runner\dask.py", line 37, in __init__
+    self._instantiated_nodes: Dict[Text, GraphNode] = self._instantiate_nodes(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\runner\dask.py", line 60, in _instantiate_nodes
+    return {
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\runner\dask.py", line 61, in <dictcomp>
+    node_name: GraphNode.from_schema_node(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\graph.py", line 566, in from_schema_node
+    return cls(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\graph.py", line 392, in __init__
+    self._load_component()
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\engine\graph.py", line 403, in _load_component
+    self._component: GraphComponent = constructor(  # type: ignore[no-redef]
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 1125, in load
+    return cls._load(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 1156, in _load
+    model = cls._load_model(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 1249, in _load_model
+    model = cls._load_model_class(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 1280, in _load_model_class
+    return cls.model_class().load(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\utils\tensorflow\models.py", line 445, in load
+    model.fit(data_generator, verbose=False)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\keras\engine\training.py", line 1685, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 894, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 942, in _call
+    self._initialize(args, kwds, add_initializers_to=initializers)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 763, in _initialize
+    self._variable_creation_fn    # pylint: disable=protected-access
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 171, in _get_concrete_function_internal_garbage_collected
+    concrete_function, _ = self._maybe_define_concrete_function(args, kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 166, in _maybe_define_concrete_function
+    return self._maybe_define_function(args, kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 396, in _maybe_define_function
+    concrete_function = self._create_concrete_function(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 300, in _create_concrete_function
+    func_graph_module.func_graph_from_py_func(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1214, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 667, in wrapped_fn
+    out = weak_wrapped_fn().__wrapped__(*args, **kwds)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1189, in autograph_handler
+    return autograph.converted_call(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 439, in converted_call
+    result = converted_f(*effective_args, **kwargs)
+  File "C:\Users\Naturmaa\AppData\Local\Temp\__autograph_generated_filevv7i9kiu.py", line 15, in tf__train_function
+    retval_ = ag__.converted_call(ag__.ld(step_function), (ag__.ld(self), ag__.ld(iterator)), None, fscope)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 459, in _call_unconverted
+    return f(*args)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\keras\engine\training.py", line 1268, in step_function
+    outputs = model.distribute_strategy.run(run_step, args=(data,))
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 1316, in run
+    return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 2895, in call_for_each_replica
+    return self._call_for_each_replica(fn, args, kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\distribute\distribute_lib.py", line 3696, in _call_for_each_replica
+    return fn(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 689, in wrapper
+    return converted_call(f, args, kwargs, options=options)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 377, in converted_call
+    return _call_unconverted(f, args, kwargs, options)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\autograph\impl\api.py", line 458, in _call_unconverted
+    return f(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\keras\engine\training.py", line 1249, in run_step
+    outputs = model.train_step(data)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\utils\tensorflow\models.py", line 161, in train_step
+    prediction_loss = self.batch_loss(batch_in)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 1657, in batch_loss
+    losses += self._batch_loss_entities(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\nlu\classifiers\diet_classifier.py", line 1719, in _batch_loss_entities
+    loss, f1, _logits = self._calculate_entity_loss(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\utils\tensorflow\models.py", line 903, in _calculate_entity_loss
+    loss = self._tf_layers[f"crf.{tag_name}"].loss(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\utils\tensorflow\layers.py", line 655, in loss
+    log_likelihood, _ = crf_log_likelihood(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\utils\tensorflow\crf.py", line 483, in crf_log_likelihood
+    log_norm = crf_log_norm(inputs, sequence_lengths, transition_params)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\rasa\utils\tensorflow\crf.py", line 441, in crf_log_norm
+    return tf.cond(tf.equal(tf.shape(inputs)[1], 1), _single_seq_fn, _multi_seq_fn)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 1176, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1427, in cond_for_tf_v2
+    return cond(pred, true_fn=true_fn, false_fn=false_fn, strict=True, name=name)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 1176, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\deprecation.py", line 576, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\control_flow_ops.py", line 1210, in cond
+    return cond_v2.cond_v2(pred, true_fn, false_fn, name)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 96, in cond_v2
+    return _build_cond(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 296, in _build_cond
+    tensors = util.run_as_function_for_tape_gradients(_make_op, cond_inputs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\control_flow_util_v2.py", line 387, in run_as_function_for_tape_gradients
+    results = function.defun_with_attributes(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compiler.py", line 143, in __call__
+    return concrete_function._call_flat(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\monomorphic_function.py", line 1763, in _call_flat
+    forward_function, args_with_tangents = forward_backward.forward()
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\monomorphic_function.py", line 1277, in forward
+    forward_function = self._functions.forward(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\monomorphic_function.py", line 1009, in forward
+    self._forward_and_backward_functions(inference_args, input_tangents))
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\monomorphic_function.py", line 1238, in _forward_and_backward_functions
+    self._build_functions_for_outputs(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\eager\polymorphic_function\monomorphic_function.py", line 729, in _build_functions_for_outputs
+    gradients_wrt_inputs = gradients_util._GradientsHelper(  # pylint: disable=protected-access
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 695, in _GradientsHelper
+    in_grads = _MaybeCompile(grad_scope, op, func_call,
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 329, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 696, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 123, in _IfGrad
+    false_grad_graph = _create_grad_func(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 430, in _create_grad_func
+    return func_graph_module.func_graph_from_py_func(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 1214, in func_graph_from_py_func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 432, in <lambda>
+    lambda: _grad_fn(func_graph, grads), [], {},
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\cond_v2.py", line 421, in _grad_fn
+    result = gradients_util._GradientsHelper(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 695, in _GradientsHelper
+    in_grads = _MaybeCompile(grad_scope, op, func_call,
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 329, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gradients_util.py", line 696, in <lambda>
+    lambda: grad_fn(op, *out_grads))
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\math_grad.py", line 1672, in _SelectGradV2
+    gx = math_ops.reduce_sum(gx, keepdims=True, axis=reduce_x)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\util\dispatch.py", line 1176, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\math_ops.py", line 2364, in reduce_sum
+    return reduce_sum_with_dims(input_tensor, axis, keepdims, name,
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\math_ops.py", line 2376, in reduce_sum_with_dims
+    gen_math_ops._sum(input_tensor, dims, keepdims, name=name))
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\ops\gen_math_ops.py", line 12707, in _sum
+    _, _, _op, _outputs = _op_def_library._apply_op_helper(
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\framework\op_def_library.py", line 795, in _apply_op_helper
+    op = g._create_op_internal(op_type_name, inputs, dtypes=None,
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 707, in _create_op_internal
+    return super()._create_op_internal(  # pylint: disable=protected-access
+  File "C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\tensorflow\python\framework\ops.py", line 3810, in _create_op_internal
+    control_inputs = self._control_dependencies_for_inputs(input_ops)
+KeyboardInterrupt
+2024-07-09 17:41:21,082 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2024-07-09 17:41:22,051 [INFO ]  Loading model models\20240709-174056-bronze-category.tar.gz...
+2024-07-09 17:42:43,287 [INFO ]  Rasa server is up and running.
+2024-07-09 17:45:36,424 [INFO ]  Killing Sanic server now.
+2024-07-09 17:45:36,978 [ERROR]  Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<ctrlc_workaround_for_windows.<locals>.stay_active() running at C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\compat.py:79> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x000002CD6185F9A0>()]>>
+2024-07-09 17:46:29,682 [INFO ]  Starting Rasa server on http://0.0.0.0:5005
+2024-07-09 17:46:30,392 [INFO ]  Loading model models\20240709-174552-charcoal-cost.tar.gz...
+2024-07-09 17:47:34,305 [INFO ]  Rasa server is up and running.
+2024-07-09 17:49:57,172 [INFO ]  Killing Sanic server now.
+2024-07-09 17:49:57,569 [ERROR]  Task was destroyed but it is pending!
+task: <Task pending name='Task-6' coro=<ctrlc_workaround_for_windows.<locals>.stay_active() running at C:\Users\Naturmaa\Desktop\dadlaga\GeregeChatbot\pythonProject5\.venv\lib\site-packages\sanic\compat.py:79> wait_for=<Future pending cb=[<TaskWakeupMethWrapper object at 0x00000232395256D0>()]>>

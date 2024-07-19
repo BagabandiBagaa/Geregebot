@@ -1,0 +1,37 @@
+version: "3.1"
+
+stories:
+- story: askworktime
+  steps:
+    - intent: ask_work_time
+    - action: utter_ask_work_time
+    - action: utter_ask_for_more
+
+- story: askcontact
+  steps:
+    - intent: ask_edtech_contact
+    - action: utter_givecontact
+    - action: utter_ask_for_more
+
+- story: receipt_info
+  steps:
+    - intent: receipt_paper_info
+    - action: utter_receipt_paper_info
+    - action: utter_ask_for_more
+
+- story: pos_shinechileh
+  steps:
+    - intent: pos_shinchilelt_hiih
+    - action: utter_snteidugaar_avah
+    - intent: snteidugaar_avah
+      entities:
+        - snnum: "V1E0633221"
+    - action: utter_ask_contact
+    - intent: give_contact
+      entities:
+        - contact: "99449083"
+    - action: utter_ask_name
+    - intent: give_name
+      entities:
+        - name: "Багабанди"
+    - action: ActionSaveData
